@@ -1,16 +1,21 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
-import AirportDetailsPage from './pages/AirportDetailsPage';
-import AuthPage from './pages/AuthPage';
-import MainPage from './pages/MainPage';
+import AirportDetailsPage from './components/pages/AirportDetailsPage';
+import AuthPage from './components/pages/AuthPage';
+import MainPage from './components/pages/MainPage';
+import Navigation from './components/navigation/Navigation';
 
 function App() {
   return (
-	<Routes>
-		<Route path='/' element={ <MainPage /> } />
-		<Route path='/auth' element={ <AuthPage /> } />
-		<Route path='/airport' element={ <AirportDetailsPage /> } />
-	</Routes>
+	<>
+		<Navigation />
+	 	<Routes>
+			<Route path='/' element={ <MainPage /> } />
+			<Route path='/auth' element={ <AuthPage /> } />
+			<Route path='/airport' element={ <AirportDetailsPage /> } />
+		</Routes>
+	</>
+
     
   );
 }
