@@ -1,9 +1,9 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
-import AirportDetailsPage from './components/pages/AirportDetailsPage';
-import AuthPage from './components/pages/AuthPage';
-import MainPage from './components/pages/MainPage';
-import Navigation from './components/navigation/Navigation';
+import AirportDetailsPage from './pages/AirportDetailsPage';
+import AuthPage from './pages/AuthPage';
+import MainPage from './pages/MainPage';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
