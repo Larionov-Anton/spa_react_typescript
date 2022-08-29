@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { error } from "console"
 import { IAirports } from "../../models/models"
 
 interface AirportState {
@@ -19,13 +18,19 @@ export const airportSlice = createSlice({
 	initialState,
 	reducers: {
 		fetching(state) {
-			state.loading = true
+			state.loading = true;
 		},
-		fetchSuccess(state, action: PayloadAction) {
-
+		fetchSuccess(state, action: PayloadAction<IAirports[]>) {
+			state.loading = false;
+			state.airports = action.payload;
 		},
-		fetchError(state, action: PayloadAction) {
-			
+		fetchError(state, action: PayloadAction<Error>) {
+			state.loading = false;
+			state.error = action.payload.message;
 		}
 	}
 })
+
+console.log(airportSlice)
+
+export default airportSlice.reducer;
