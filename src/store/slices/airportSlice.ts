@@ -31,6 +31,6 @@ export const airportSlice = createSlice({
 	}
 })
 
-console.log(airportSlice)
+
 
 export default airportSlice.reducer;

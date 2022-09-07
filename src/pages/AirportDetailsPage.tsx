@@ -1,8 +1,12 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+
 
 function AirportDetailsPage() {
+	const params = useParams<'id'>()
+
 	return (
-		<div>AirportDetailsPage</div>
+		<div></div>
 	)
 }
 
